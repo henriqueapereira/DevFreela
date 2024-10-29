@@ -1,7 +1,7 @@
-﻿using DevFreela.API.Controllers;
-using DevFreela.API.Enums;
+﻿
+using DevFreela.Core.Enums;
 
-namespace DevFreela.API.Entities;
+namespace DevFreela.Core.Entities;
 
 public class Project : BaseEntity
 {
@@ -24,7 +24,7 @@ public class Project : BaseEntity
     public User Client { get; private set; }
     public int IdFreelancer { get; private set; }
     public User Freelancer { get; private set; }
-    public Decimal TotalCost  { get; private set; }
+    public decimal TotalCost { get; private set; }
     public DateTime? StartedAt { get; private set; }
     public DateTime? CompletedAt { get; private set; }
     public ProjectStatusEnum Status { get; private set; }
@@ -47,7 +47,7 @@ public class Project : BaseEntity
         }
     }
 
-    public void Complete() 
+    public void Complete()
     {
         if (Status == ProjectStatusEnum.PaymentPending || Status == ProjectStatusEnum.InProgress)
         {

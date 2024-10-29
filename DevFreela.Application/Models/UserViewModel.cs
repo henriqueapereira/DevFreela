@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore.Metadata;
 using System.ComponentModel.DataAnnotations;
 
-namespace DevFreela.API.Models;
+namespace DevFreela.Application.Models;
 
 public class UserViewModel
 {

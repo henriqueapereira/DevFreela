@@ -1,6 +1,6 @@
 ﻿using DevFreela.Core.Entities;
 
-namespace DevFreela.API.Models;
+namespace DevFreela.Application.Models;
 
 public class ProjectViewModel
 {
@@ -31,5 +31,5 @@ public class ProjectViewModel
     public static ProjectViewModel FromEntity(Project entity) => new ProjectViewModel(
         entity.Id, entity.Title, entity.Description, entity.IdClient, entity.IdFreelancer,
         entity.Client.FullName, entity.Freelancer.FullName, entity.TotalCost, entity.Comments
-        ); 
+        );
 }
